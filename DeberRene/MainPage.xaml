@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeberRene.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
+            <BoxView HeightRequest="10"/>
+            <Frame BackgroundColor="GreenYellow" HasShadow="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblUsuario" Grid.Row="0" Grid.Column="0" TextColor="Black">Sistema de Calificaciones Universidad Israel</Label>
+                   
+                    <Label Grid.Row="2" Grid.Column="0" TextColor="Black">Nota Seguimiento 1</Label>
+                    <Entry x:Name="txtseguimiento1" Grid.Row="2" Grid.Column="1"/>
+                    <Label Grid.Row="3" Grid.Column="0" TextColor="Black">Examen 1</Label>
+                    <Entry x:Name="txtexamen1" Grid.Row="3" Grid.Column="1" />
+                    <Label Grid.Row="4" Grid.Column="0" TextColor="Black">Nota Seguimiento 2</Label>
+                    <Entry x:Name="txtseguimiento2" Grid.Row="4" Grid.Column="1"/>
+                    <Label Grid.Row="5" Grid.Column="0" TextColor="Black">Examen 2</Label>
+                    <Entry x:Name="txtexamen2" Grid.Row="5" Grid.Column="1"/>
+                    <Label Grid.Row="6" Grid.Column="0" TextColor="Black">Total</Label>
+                    <Entry x:Name="txttotal" Grid.Row="6" Grid.Column="1"/>
+                </Grid>
+            </Frame>
+            <Button Command="{Binding SubmitCommand}" Text="Estado" TextColor="Red"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="Black"  Clicked="Button_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
